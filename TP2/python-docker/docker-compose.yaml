@@ -1,0 +1,8 @@
+version: '3'
+
+services: 
+  web:
+    build: . 
+    command: sh -c "app main:app --reload --port=32211 --host=0.0.0.0"
+    ports: 
+      - 32211:32211
