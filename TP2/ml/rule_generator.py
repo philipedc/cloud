@@ -6,7 +6,7 @@ from fpgrowth_py import fpgrowth
 FILEPATH_DS1 = 'files/2023_spotify_ds1.csv'
 FILEPATH_DS2 = 'files/2023_spotify_ds2.csv'
 
-RULES_PATH = 'python-docker/rules/'
+RULES_PATH = 'rules/'
 
 def generate_rules(df):
     df = df.loc[:, ['pid', 'track_name', 'artist_name']]

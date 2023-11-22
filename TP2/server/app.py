@@ -6,7 +6,7 @@ VERSION = 1.0
 MODEL_DATE = date(2023, 11, 21)
 
 app = Flask(__name__)
-app.model = pickle.load(open("rules/basic_rules.pkl", "rb"))
+app.model = pickle.load(open("/app/rules/basic_rules.pkl", "rb"))
 
 
 @app.route("/", methods=["GET"])
