@@ -14,7 +14,7 @@ app.model = pickle.load(open(file_path, "rb"))
 
 @app.route("/", methods=["GET"])
 def hello_screen():
-    return jsonify("Hello!!!! Please go to /api/recommend to get a playlist recommendation!"), 200
+    return jsonify("Hi! Please go to /api/recommend to get a playlist recommendation!"), 200
 
 @app.route("/api/recommend", methods=["POST"])
 def get_recommendation():
