@@ -11,7 +11,6 @@ app = Flask(__name__)
 file_path = "/app/rules/basic_rules.pkl"
 # app.model = pickle.load(open(file_path, "rb"))
 
-
 @app.route("/", methods=["GET"])
 def hello_screen():
     return jsonify("Hello! Please go to /api/recommend to get a playlist recommendation!"), 200
