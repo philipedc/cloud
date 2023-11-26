@@ -24,4 +24,4 @@ jobs:
         with:
           context: TP2/server/
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/server/
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/server
