@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: api
 spec:
-  replicas: 1
+  replicas: 2
   selector:
     matchLabels:
       app: api
@@ -20,7 +20,8 @@ spec:
         volumeMounts:
         - name: project2-pv-philipecunha
           mountPath: /app/rules
-      - name: ml
+      initContainers:
+        - name: ml
         image: philipedc/ml:latest
         volumeMounts:
         - name: project2-pv-philipecunha
