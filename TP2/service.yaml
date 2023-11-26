@@ -4,7 +4,7 @@ metadata:
   name: api-service
 spec:
   selector:
-    name: api
+    app: api
   ports:
     - protocol: TCP
       port: 32211

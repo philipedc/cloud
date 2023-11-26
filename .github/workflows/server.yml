@@ -29,3 +29,7 @@ jobs:
           push: true
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/server:latest
           #  tags: ${{ secrets.DOCKERHUB_USERNAME }}/server:${{ env.IMAGE_VERSION }}
+
+      - name: force update pods
+        run: |
+          kubectl delete deploy api 

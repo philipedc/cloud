@@ -9,6 +9,7 @@ MODEL_DATE = date(2023, 11, 21)
 
 app = Flask(__name__)
 
+
 file_path = "/app/rules/basic_rules.pkl"
 # app.model = pickle.load(open(file_path, "rb"))
 
