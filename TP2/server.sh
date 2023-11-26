@@ -1,0 +1,1 @@
+docker run --publish 32211:32211 -it --rm --mount type=bind,source="${PWD}"/ml/rules,destination=/app/rules flask:1
