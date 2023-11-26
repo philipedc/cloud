@@ -29,7 +29,3 @@ jobs:
           push: true
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/ml:latest # change later
           # tags: ${{ secrets.DOCKERHUB_USERNAME }}/ml:${{ env.IMAGE_VERSION }}
-
-      - name: force update pods
-        run: |
-          kubectl delete deploy api
