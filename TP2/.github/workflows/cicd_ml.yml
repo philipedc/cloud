@@ -7,7 +7,7 @@ on:
 
 jobs: 
   build-deploy-ml:
-    runs-on: python:3.8-slim-buster
+    runs-on: ubuntu-latest
   
     steps:
       - name: checkout repo
@@ -22,6 +22,6 @@ jobs:
       - name: build and push ml image
         uses: docker/build-push-action@v4
         with:
-          context: ml/
+          context: TP2/ml/
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/ml 
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/ml:$(date +%s)

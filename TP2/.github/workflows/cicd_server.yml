@@ -7,7 +7,7 @@ on:
 
 jobs: 
   build-deploy-server:
-    runs-on: python:3.8-slim-buster
+    runs-on: ubuntu-latest
 
     steps:
       - name: checkout repo
@@ -22,6 +22,6 @@ jobs:
       - name: build and push server image
         uses: docker/build-push-action@v4
         with:
-          context: server/
+          context: TP2/server/
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/server 
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/server/$(date +%s) 
