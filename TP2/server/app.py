@@ -15,6 +15,7 @@ file_path = "/app/rules/basic_rules.pkl"
 def hello_screen():
     return jsonify("H       ello! Please go to /api/recommend to get a playlist recommendation!"), 200
 
+
 @app.route("/api/recommend", methods=["POST"])
 def get_recommendation():
     client_songs_list = request.get_json()['songs']
