@@ -23,10 +23,10 @@ spec:
       initContainers:
       - name: ml
         image: philipedc/ml:latest
+        restartPolicy: OnFailure
         volumeMounts:
         - name: project2-pv-philipecunha
           mountPath: /app/rules
-          restartPolicy: OnFailure
       volumes:
       - name: project2-pv-philipecunha
         persistentVolumeClaim:
