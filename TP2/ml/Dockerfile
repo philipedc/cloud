@@ -6,6 +6,4 @@ COPY . .
 
 CMD ["./mv.sh"]
 
-CMD ["echo $(ls ./rules)"]
-
 CMD ["python", "rule_generator.py"]
