@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: api
-        image: philipedc/api-flask:latest
+        image: philipedc/server:latest
         ports:
           - containerPort: 32211
         volumeMounts:
