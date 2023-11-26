@@ -23,7 +23,6 @@ spec:
       initContainers:
       - name: ml
         image: philipedc/ml:latest
-        restartPolicy: Never
         volumeMounts:
         - name: project2-pv-philipecunha
           mountPath: /app/rules
