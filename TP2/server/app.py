@@ -1,16 +1,12 @@
 from flask import Flask, jsonify, request
 import pickle
 from datetime import date
-<<<<<<< HEAD
 import os
-=======
->>>>>>> d9a92ad3d26ce276ce68b0db9bf5258e4dcfe726
 
 VERSION = 1.0
 MODEL_DATE = date(2023, 11, 21)
 
 app = Flask(__name__)
-<<<<<<< HEAD
 
 file_path = "/app/rules/basic_rules.pkl"
 LAST_MODIFICATION = os.path.getmtime(file_path)
@@ -24,22 +20,12 @@ def check_update_file():
 @app.route("/", methods=["GET"])
 def hello_screen():
     check_update_file()
-=======
-app.model = pickle.load(open("/app/rules/basic_rules.pkl", "rb"))
-
-
-@app.route("/", methods=["GET"])
-def hello_screen():
->>>>>>> d9a92ad3d26ce276ce68b0db9bf5258e4dcfe726
     return jsonify("Hello! Please go to /api/recommend to get a playlist recommendation!"), 200
 
 
 @app.route("/api/recommend", methods=["POST"])
 def get_recommendation():
-<<<<<<< HEAD
     check_update_file()
-=======
->>>>>>> d9a92ad3d26ce276ce68b0db9bf5258e4dcfe726
     client_songs_list = request.get_json()['songs']
     recommendation = [
         rule[1] for rule in app.model if (rule[0] in client_songs_list and rule[2] >= 0.6)

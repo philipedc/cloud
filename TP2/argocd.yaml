@@ -1,0 +1,25 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: 'cicd'
+spec:
+  project: philipecunha-project
+  source:
+    repoURL: 'https://github.com/philipedc/cloud/'
+    path: TP2
+    targetRevision: HEAD
+  destination:
+    server: 'https://kubernetes.default.svc'
+    namespace: philipecunha
+    name: ''
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+  # Add hooks to wait for image to be ready before sync
+  syncOptions:
+    - hooks:
+      - name: wait-for-image
+        when: Succeeded
+        manifest:
+          path: my-app/deployment.yaml  # Specify the path to your deployment manifest
