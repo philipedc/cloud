@@ -26,7 +26,7 @@ spec:
         volumeMounts:
         - name: project2-pv-philipecunha
           mountPath: /app/rules
-        restartPolicy: OnFailure
+          restartPolicy: OnFailure
       volumes:
       - name: project2-pv-philipecunha
         persistentVolumeClaim:
