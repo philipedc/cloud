@@ -15,6 +15,7 @@ spec:
       containers:
       - name: server
         image: philipedc/server:latest
+        imagePullPolicy: Always
         ports:
           - containerPort: 32211
         volumeMounts:
@@ -23,6 +24,7 @@ spec:
       initContainers:
       - name: ml
         image: philipedc/ml:latest
+        imagePullPolicy: Always
         volumeMounts:
         - name: rules
           mountPath: /app/rules
