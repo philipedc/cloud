@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: api
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: api
+  template:
+    metadata:
+      labels:
+        app: api
+    spec:
+      containers:
+      - name: api
+        image: philipedc/api-flask:latest
+        ports:
+          - containerPort: 32211
+        volumeMounts:
+        - name: project2-pv-philipecunha
+          mountPath: /app/rules
+      - name: ml
+        image: philipedc/ml:latest
+        volumeMounts:
+        - name: project2-pv-philipecunha
+          mountPath: /app/rules
+        restartPolicy: OnFailure
+      volumes:
+      - name: project2-pv-philipecunha
+        persistentVolumeClaim:
+          claimName: project2-pv-philipecunha
