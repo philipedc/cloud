@@ -9,6 +9,9 @@ jobs:
   build-deploy-server:
     runs-on: ubuntu-latest
 
+    env:
+      IMAGE_VERSION: ${{ github.run_number }}
+
     steps:
       - name: checkout repo
         uses: actions/checkout@v3
