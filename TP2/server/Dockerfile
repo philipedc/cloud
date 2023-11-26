@@ -6,4 +6,6 @@ COPY . .
 
 RUN pip install -r requirements.txt
 
-CMD ["python", "app.py"]
+EXPOSE 32211
+
+CMD python app.py --host=0.0.0.0 --port 32211
