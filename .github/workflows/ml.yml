@@ -9,8 +9,8 @@ jobs:
   build-deploy-ml:
     runs-on: ubuntu-latest
 
-    env:
-      IMAGE_VERSION: ${{ github.run_number }}
+    # env:
+    #   IMAGE_VERSION: ${{ github.run_number }}
 
     steps:
       - name: checkout repo
@@ -27,4 +27,5 @@ jobs:
         with:
           context: TP2/ml/
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/ml:${{ env.IMAGE_VERSION }}
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/ml:latest # change later
+          # tags: ${{ secrets.DOCKERHUB_USERNAME }}/ml:${{ env.IMAGE_VERSION }}
