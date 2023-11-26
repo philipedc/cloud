@@ -7,6 +7,7 @@ import os
 VERSION = 1.0
 MODEL_DATE = date(2023, 11, 21)
 
+
 app = Flask(__name__)
 
 
