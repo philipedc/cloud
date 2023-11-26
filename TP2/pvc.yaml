@@ -2,9 +2,9 @@ apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
   namespace: philipecunha
-  name: project2-pv-philipecunha
+  name: project2-pvc-philipecunha
 spec:
-  # volumeName: project2-pv-philipecunha 
+  volumeName: project2-pv-philipecunha 
   accessModes:
     - ReadWriteMany 
   storageClassName: standard

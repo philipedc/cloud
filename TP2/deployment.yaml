@@ -18,15 +18,15 @@ spec:
         ports:
           - containerPort: 32211
         volumeMounts:
-        - name: project2-pv-philipecunha
+        - name: rules
           mountPath: /app/rules
       initContainers:
       - name: ml
         image: philipedc/ml:latest
         volumeMounts:
-        - name: project2-pv-philipecunha
+        - name: rules
           mountPath: /app/rules
       volumes:
-      - name: project2-pv-philipecunha
+      - name: rules
         persistentVolumeClaim:
-          claimName: project2-pv-philipecunha
+          claimName: project2-pvc-philipecunha
