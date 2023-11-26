@@ -24,4 +24,4 @@ jobs:
         with:
           context: TP2/ml/
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/ml:$(date +%s)
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/ml
