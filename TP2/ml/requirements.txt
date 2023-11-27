@@ -1,2 +1,2 @@
 pandas
-fpgrowth
+fpgrowth_py
