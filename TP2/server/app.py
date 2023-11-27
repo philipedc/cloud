@@ -32,7 +32,8 @@ def get_recommendation():
         
     # Remove duplicates in recommendation
     list(set(recommendation))
-    
+
+
     return jsonify(
         {
             "playlist_ids":recommendation, 
