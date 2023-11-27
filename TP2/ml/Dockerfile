@@ -4,6 +4,6 @@ WORKDIR /app
 
 COPY . .
 
-CMD ["./mv.sh"]
+RUN pip install -r requirements.txt
 
 CMD ["python", "rule_generator.py"]
