@@ -1,0 +1,12 @@
+project: philipecunha-project
+source:
+  repoURL: 'https://github.com/philipedc/cloud'
+  path: TP2
+  targetRevision: HEAD
+destination:
+  server: 'https://kubernetes.default.svc'
+  namespace: philipecunha
+syncPolicy:
+  automated:
+    prune: true
+    selfHeal: true

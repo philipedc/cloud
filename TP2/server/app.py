@@ -12,7 +12,6 @@ app = Flask(__name__)
 
 
 file_path = "/app/rules/basic_rules.pkl"
-# app.model = pickle.load(open(file_path, "rb"))
 
 
 @app.route("/", methods=["GET"])
@@ -32,7 +31,6 @@ def get_recommendation():
         
     # Remove duplicates in recommendation
     list(set(recommendation))
-
 
     return jsonify(
         {
