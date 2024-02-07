@@ -1,3 +1,1 @@
-# Assignments related to the discipline of Cloud Computing
-
-## [TP 1](./TP1/)
+> :warning: **DISCLAIMER:** This repository serves solely for future reference; it was utilized with a virtual machine that is no longer in existence.
